@@ -1,0 +1,50 @@
+.my-msg-div{
+	background: url(../../images/my-bg.png) no-repeat;
+	background-size: 100% 100%;
+	height: 310px;
+	padding-top:5rem;
+	text-align: center;
+}
+.user-pic{
+	width:80px;
+	height: 80px;
+	border-radius:50% ;
+	border:5px solid #1fa8f6;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.user-pic img{
+	width: 100%;
+}
+.my-msg-div p{
+	color: white;
+	font-weight: 600;
+	margin-top:2rem;
+}
+.mui-table-view:before,.mui-table-view:after{
+	background-color: transparent;
+}
+.my-centent{
+	width: 85%;
+	margin: 0 auto;
+	margin-top:8%;
+}
+.my-centent ul{
+	padding: 3% 0;
+	border-radius:10px ;
+}
+.my-centent ul li a{
+	padding:5% 8% !important;
+	font-size:0.9rem;
+	font-weight: 600;
+}
+.mui-navigate-right:after, .mui-push-left:after, .mui-push-right:after{
+	color: #7c7c7c;
+}
+.mui-table-view-cell:after{
+	left: 20px;
+	right: 15px;
+}
+.mui-table-view-cell>a:not(.mui-btn).mui-active{
+	background-color: transparent;
+}

@@ -1,0 +1,69 @@
+.my-msg-div{
+	background: url(../../images/my-bg.png) no-repeat;
+	background-size: 100% 100%;
+	height: 310px;
+	padding-top:5rem;
+	text-align: center;
+}
+.user-pic{
+	width:80px;
+	height: 80px;
+	border-radius:50% ;
+	border:5px solid #1fa8f6;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.user-pic img{
+	width: 100%;
+}
+.my-msg-div p{
+	color: white;
+	font-weight: 600;
+	margin-top:2rem;
+}
+.my-centent{
+	padding:15% 8%;
+}
+.my-centent-div{
+	width: 48%;
+	background-color: white;
+	text-align: center;
+	border-radius:10px ;
+	padding:8%;
+	cursor: pointer;
+}
+.my-centent-div p{
+	color: black;
+	margin-top: 5%;
+	margin-bottom: 0;
+}
+.my-centent-div:first-of-type img{
+	margin-top:3px;
+}
+.my-centent-div:first-of-type{
+	margin-right:2%;
+}
+.my-centent-div:last-of-type{
+	margin-left:2%;
+}
+/*弹出框*/
+.popover{
+	background-color: white;
+	position: fixed;
+	top: 35%;
+	left: 50%;
+	text-align: center;
+}
+.popover-my-suggest{
+	padding:2%;
+}
+.popover-my-suggest textarea{
+	margin-top: 2%;
+}
+.popover-my-suggest p{
+	float: right;
+}
+.mui-button-row{
+	margin-top: 10%;
+	margin-bottom:5%;
+}

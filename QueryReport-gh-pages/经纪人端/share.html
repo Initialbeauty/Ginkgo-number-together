@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>分享</title>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/pubic.css" />
+    <link rel="stylesheet" href="../css/agent/share.css" />
+</head>
+<body>
+	<div class="all-div">
+	<!--内容-->
+	<div class="big-div">
+		<div class="share-title-English">
+			<p>DATA</p>
+			<p>EXPERTS</p>
+		</div>
+		<div class="share-title-Chinese">
+			<p>融数聚信
+				<img src="../images/triangle.png" />
+				<img src="../images/triangle.png" />
+				<img src="../images/triangle.png" />
+			</p>
+			<p>数据分析专家</p>
+		</div>
+		<div class="two-dimension-code">
+			<div class="two-dimension-code-img">
+				<img src="../images/ewm.png" />
+			</div>
+			<p>长按保存二维码，分享享佣金</p>
+		</div>
+	</div>
+	<!--底部-->
+	<div class="tabBar mui-row">
+		<div class="mui-col-xs-3 tabBar-home">
+			<div class="pic-div"><img src="../images/home.gif" /></div>
+			<p>首页</p>
+		</div>
+		<div class="mui-col-xs-3 tabBar-bill">
+			<div class="pic-div"><img src="../images/bill.gif" /></div>
+			<p>账单</p>
+		</div>
+		<div class="mui-col-xs-3 tabBar-share">
+			<div class="pic-div"><img src="../images/share-b.gif" /></div>
+			<p class="tabBar-active">分享</p>
+		</div>
+		<div class="mui-col-xs-3 tabBar-my">
+			<div class="pic-div"><img src="../images/my.gif" /></div>
+			<p>我的</p>
+		</div>
+	</div>
+	</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.12.4.js" ></script>
+<script src="../js/public.js"></script>
+<script type="text/javascript" charset="utf-8">
+    mui.init();
+    $(function(){
+    	//点击底部导航栏跳转页面
+    	$(".tabBar-home").click(function(){
+    		window.location.href="index.html"
+    	})
+    	$(".tabBar-bill").click(function(){
+    		window.location.href="bill.html"
+    	})
+    	$(".tabBar-my").click(function(){
+    		window.location.href="my.html"
+    	})
+    	
+    	//获取屏幕高度
+    	var pHeight=$(window).height()
+    	//设置body高度
+    	$("body").css("height",pHeight+"px")
+    	$(window).resize(function(){
+    		var pHeight=$(window).height();
+    		$("body").css("height",pHeight+"px")
+    	})
+    })
+</script>
+</html>

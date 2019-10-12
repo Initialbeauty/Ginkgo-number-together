@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>白果数聚</title>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/user-public.css" />
+    <link rel="stylesheet" href="../css/user/user-home.css" />
+</head>
+<body>
+	<div class="big-div">
+		<!--头部报告实例-->
+		<div class="report-div">
+			<div class="easy-rp report">
+				<p class="hot-p">HOT</p>
+				<p class="msg">详版分析报告</p>
+				<p class="small-msg">手机号码表现、司法涉诉、非银借贷、网贷</p>
+				<button>去获取</button>
+			</div>
+			<div class="detail-rp report">
+				<p class="msg">简版分析报告</p>
+				<p class="small-msg-2">网贷记录、多平台申请</p>
+			</div>
+		</div>
+		<!--速递-->
+		<div class="advertisement">
+			<img src="../images/lightning.gif" />
+			<b>速递</b> 
+			<div class="advertisement-ul">
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>
+			</div>
+		</div>
+		<!--小广告提示-->
+		<div class="hint-div">
+			<p>NEW</p>
+			<p>查询报告&nbsp;限时优惠</p>
+		</div>
+		<!--小工具-->
+		<div class="tool-div">
+			<div class="tool-title">
+				<img src="../images/u-home-xgj.png" /><span>小工具</span>
+			</div>
+			<div class="tool-conten">
+				<img src="../images/u-home-jsq.gif" />
+				<span>利率计算器</span>
+			</div>
+			<div class="tool-conten">
+				<img src="../images/u-home-car.gif" />
+				<span class="margin-span">车辆评估</span>
+			</div>
+		</div>
+	</div>
+	<!--底部-->
+	<div class="tabBar mui-row">
+		<div class="tabBar-home tabBar-div mui-col-xs-4">
+			<div class="pic-div"><img src="../images/home-b.gif" /></div>
+			<p class="tabBar-active">首页</p>
+		</div>
+		<!--<div class="tabBar-report tabBar-div">
+			<div class="pic-div"><img src="../images/u-tabbar-report.gif" /></div>
+			<p>报告</p>
+		</div>-->
+		<div class="mui-col-xs-4 tabBar-div">
+		</div>
+		<!--<div class="tabBar-share tabBar-div">
+			<div class="pic-div"><img src="../images/share.gif" /></div>
+			<p>分享</p>
+		</div>-->
+		<div class="tabBar-my tabBar-div mui-col-xs-4">
+			<div class="pic-div"><img src="../images/my.gif" /></div>
+			<p>我的</p>
+		</div>
+	</div>
+	<div class="tabBar-report-btn">
+		查询报告
+	</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.12.4.js" ></script>
+<script type="text/javascript" src="../js/public.js" ></script>
+<script type="text/javascript" charset="utf-8">
+    mui.init();
+    $(function(){
+    	//点击底部导航栏跳转页面
+    	$(".tabBar-report-btn").click(function(){
+    		window.location.href="user-report-xb.html"
+    	})
+//  	$(".tabBar-share").click(function(){
+//  		window.location.href="user-share.html"
+//  	})
+    	$(".tabBar-my").click(function(){
+    		window.location.href="user-my.html"
+    	})
+    	
+    	//设置整个页面大小
+    	var htmlHeight=$(window).height();
+    	$(".big-div").height(htmlHeight-100)
+    	$(window).resize(function(){
+    		//设置按钮贴底
+	    	var divHeight=$(".msg-div").height();
+	    	$(".btn-div").height(divHeight)
+	    	//设置整个页面大小
+	    	var htmlHeight=$(window).height();
+	    	$(".big-div").height(htmlHeight-100)
+    	})
+    	
+    	//头部报告设置高
+    	var repHeight=$(".report").width();
+    	$(".report").css("height",repHeight+"px");
+    	
+    	//速递逻辑
+    	 //获取li数量
+    	var num=$(".advertisement-ul ul li").length;
+    	//滚动li
+    	var index=0;
+    	setInterval(function(){
+    		index++;
+    		if(index>num-1){
+    			index=0;
+    		}
+    		$(".advertisement-ul ul li").eq(index).slideDown().siblings().slideUp()
+    	},2000)
+    	
+    	//窗口改变
+    	$(window).resize(function(){
+    		//头部报告设置高
+    		var repHeight=$(".report").width();
+    		$(".report").css("height",repHeight+"px");
+    	})
+    })
+</script>
+</html>

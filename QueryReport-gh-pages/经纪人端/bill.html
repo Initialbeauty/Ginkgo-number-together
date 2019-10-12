@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>账单</title>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../css/pubic.css" />
+    <link rel="stylesheet" href="../css/agent/bill.css" />
+</head>
+<body>
+	<!--头部-->
+	<div class="menu">
+		<ul class="menu-ul">
+			<li><span class="menu-title">交易类型</span><span class="mui-icon mui-icon-arrowdown"></span>
+				<ul class="second-menu">
+					<li value="1">用户</li>
+					<li value="2">信贷经理</li>
+					<li value="3">提现</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!--账单-->
+	<div class="bill-div">
+		<div class="bill-title">
+			<input type="text" id="datepicker"/>
+			<span class="bill-name">月账单</span>
+			<p>提现￥<span class="bill-tx">100</span>&nbsp;收入￥<span class="bill-sr">100</span></p>
+		</div>
+		<div class="bill-particulars">
+			<ul>
+				<li class="mui-row">
+					<div class="mui-col-xs-1">
+						<img src="../images/client-j.gif" />
+					</div>
+					<div class="mui-col-xs-9 user-div">
+						<p class="user-name">用户123</p>
+						<p>2019.09.01</p>
+					</div>
+					<div class="mui-col-xs-2 user-money">+5.00</div>
+				</li>
+				<li class="mui-row">
+					<div class="mui-col-xs-1">
+						<img src="../images/client-j.gif" />
+					</div>
+					<div class="mui-col-xs-9 user-div">
+						<p class="user-name">用户123</p>
+						<p>2019.09.01</p>
+					</div>
+					<div class="mui-col-xs-2 user-money">+5.00</div>
+				</li>
+				<li class="mui-row">
+					<div class="mui-col-xs-1">
+						<img src="../images/client-j.gif" />
+					</div>
+					<div class="mui-col-xs-9 user-div">
+						<p class="user-name">用户123</p>
+						<p>2019.09.01</p>
+					</div>
+					<div class="mui-col-xs-2 user-money">+5.00</div>
+				</li>
+				<li class="mui-row">
+					<div class="mui-col-xs-1">
+						<img src="../images/client-j.gif" />
+					</div>
+					<div class="mui-col-xs-9 user-div">
+						<p class="user-name">用户123</p>
+						<p>2019.09.01</p>
+					</div>
+					<div class="mui-col-xs-2 user-money">+5.00</div>
+				</li>
+				<li class="mui-row">
+					<div class="mui-col-xs-1">
+						<img src="../images/client-j.gif" />
+					</div>
+					<div class="mui-col-xs-9 user-div">
+						<p class="user-name">用户123</p>
+						<p>2019.09.01</p>
+					</div>
+					<div class="mui-col-xs-2 user-money">+5.00</div>
+				</li>
+				<li class="mui-row">
+					<div class="mui-col-xs-1">
+						<img src="../images/client-j.gif" />
+					</div>
+					<div class="mui-col-xs-9 user-div">
+						<p class="user-name">用户123</p>
+						<p>2019.09.01</p>
+					</div>
+					<div class="mui-col-xs-2 user-money">+5.00</div>
+				</li>
+				<li class="mui-row">
+					<div class="mui-col-xs-1">
+						<img src="../images/client-j.gif" />
+					</div>
+					<div class="mui-col-xs-9 user-div">
+						<p class="user-name">用户123</p>
+						<p>2019.09.01</p>
+					</div>
+					<div class="mui-col-xs-2 user-money">+5.00</div>
+				</li>
+				<li class="mui-row">
+					<div class="mui-col-xs-1">
+						<img src="../images/client-j.gif" />
+					</div>
+					<div class="mui-col-xs-9 user-div">
+						<p class="user-name">用户123</p>
+						<p>2019.09.01</p>
+					</div>
+					<div class="mui-col-xs-2 user-money">+5.00</div>
+				</li>
+				<li class="mui-row">
+					<div class="mui-col-xs-1">
+						<img src="../images/client-j.gif" />
+					</div>
+					<div class="mui-col-xs-9 user-div">
+						<p class="user-name">用户123</p>
+						<p>2019.09.01</p>
+					</div>
+					<div class="mui-col-xs-2 user-money">+5.00</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!--底部-->
+	<div class="tabBar mui-row">
+		<div class="mui-col-xs-3 tabBar-home">
+			<div class="pic-div"><img src="../images/home.gif" /></div>
+			<p>首页</p>
+		</div>
+		<div class="mui-col-xs-3 tabBar-bill">
+			<div class="pic-div"><img src="../images/bill-b.gif" /></div>
+			<p class="tabBar-active">账单</p>
+		</div>
+		<div class="mui-col-xs-3 tabBar-share">
+			<div class="pic-div"><img src="../images/share.gif" /></div>
+			<p>分享</p>
+		</div>
+		<div class="mui-col-xs-3 tabBar-my">
+			<div class="pic-div"><img src="../images/my.gif" /></div>
+			<p>我的</p>
+		</div>
+	</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.12.4.js" ></script>
+<script type="text/javascript" src="../js/public.js" ></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js" ></script>
+<script type="text/javascript" charset="utf-8">
+    mui.init();
+    $(function(){
+    	//点击底部导航栏跳转页面
+    	$(".tabBar-home").click(function(){
+    		window.location.href="index.html"
+    	})
+    	$(".tabBar-share").click(function(){
+    		window.location.href="share.html"
+    	})
+    	$(".tabBar-my").click(function(){
+    		window.location.href="my.html"
+    	})
+    	//点击显示二级菜单
+    	$(".menu-ul>li").click(function(){
+    		$(".second-menu").toggle()
+    	})
+    	//点击二级菜单更改标题
+    	$(".second-menu li").click(function(){
+    		$(".menu-title").text($(this).text())
+    		$(".bill-particulars ul").empty();
+    		$(".bill-particulars ul").append(
+    			`<li>123</li>`
+    		)
+    	})
+    	//获取屏幕高度
+    	var pHeight=$(window).height()
+    	//初始化设置账单栏的高度
+    	$(".bill-particulars").css("height",pHeight*0.62+"px")
+    	$(window).resize(function(){
+    		//获取屏幕高度
+	    	var pHeight=$(window).height()
+	    	//屏幕大小改变设置账单栏的高度
+	    	$(".bill-particulars").css("height",pHeight*0.62+"px")
+    	})
+    	//滚动条滚动一半时，请求数据
+    	var reqHeight=$(".bill-particulars").height();
+    	$(".bill-particulars").scroll(function(){
+    		var ulHeight=$(".bill-particulars ul").height();
+    		var scrollHeight=$(".bill-particulars").scrollTop();
+    		if(scrollHeight+reqHeight>ulHeight){
+    			//ajax请求数据
+//  			$.ajax({
+//  				type:"get",
+//  				url:"",
+//  				success:function(){
+//  					$(".bill-particulars ul").append(
+//		    				``
+//		    			)
+//  				}
+//  			});
+    		}
+    	})
+    	//日历
+    	$("#datepicker").datepicker({
+    		showOn: "button",
+	      	buttonImage: "../images/date.gif",
+	      	buttonImageOnly: true,
+	      	dateFormat: 'yy年mm月', 
+	      	changeMonth: true,
+      		changeYear: true
+    	})
+    	$("#datepicker").change(function(){
+    		var data={
+    			date:$(this).val()
+    		}
+//  		$.ajax({
+//  			type:"post",
+//  			url:"",
+//  			data:date,
+//  			success:function(){
+//  				
+//  			}
+//  		});
+    	})
+    })
+</script>
+</html>

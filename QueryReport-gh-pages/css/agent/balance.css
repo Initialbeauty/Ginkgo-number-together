@@ -1,0 +1,52 @@
+*{
+	list-style: none;
+}
+/*body{
+	background-color: white;
+}*/
+.menu{
+	text-align: center;
+	overflow: hidden;
+	background-color: #eeeeee;
+}
+ul{
+	padding: 0;
+}
+.mui-scroll-wrapper{
+	top: 55px;
+}
+.mui-scroll{
+	padding:0% 5% 10% 5%;
+	background-color: white;
+}
+.mui-scroll ul{
+	margin: 0;
+}
+.mui-scroll li{
+	border-bottom: 1px solid #eaeaea;
+}
+.mui-scroll p{
+	margin-top: 0.5rem;
+	margin-bottom: 0;
+}
+.mui-scroll img{
+	margin-top:0.5rem;
+}
+.mui-scroll li{
+	padding:3% 0;
+}
+.user-div{
+	padding-left:4%;
+}
+.user-name{
+	color: black;
+	font-size: 1rem;
+}
+.user-money{
+	margin-top:0.5rem;
+	color: #3e3e3e;
+	font-weight: 600;
+}
+.mui-table-view:after{
+	background-color: transparent;
+}

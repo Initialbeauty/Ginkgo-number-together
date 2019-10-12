@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我的</title>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/pubic.css" />
+    <link rel="stylesheet" href="../css/agent/my.css" />
+</head>
+<body>
+	<!--头部-->
+	<div class="my-msg-div">
+		<div class="user-pic">
+			<img src="../images/about-us.gif" />
+		</div>
+		<p class="user-name">用户XXXXXX</p>
+	</div>
+	<!--内容-->
+	<div class="my-centent mui-row">
+		<div class="mui-col-xs-6 my-centent-div about-us">
+			<img src="../images/about-us.gif" />
+			<p><b>关于我们</b></p>
+		</div>
+		<div class="mui-col-xs-6 my-centent-div my-suggest">
+			<img src="../images/my-suggest.gif" />
+			<p><b>我的建议</b></p>
+		</div>
+	</div>
+	<!--弹出框-关于我们-->
+	<div id="popover1" class="mui-popover popover-about-us popover">
+     	<div>我们想说</div>
+    </div>
+    <!--弹出框-我的建议-->
+	<div id="popover2" class="mui-popover popover-my-suggest popover">
+     	<label for="suggest">我的建议</label>
+     	<textarea name="suggest" maxlength="200" rows="5"></textarea>
+     	<p>还可以输入<span class="red" id="leaves">200</span>/200</p>
+     	<div class="mui-button-row">
+	        <button type="button" class="mui-btn mui-btn-primary sure">确认</button>
+	        <button type="button" class="mui-btn mui-btn-danger no">取消</button>
+    	</div>
+     </div>
+	<!--底部-->
+	<div class="tabBar mui-row">
+		<div class="mui-col-xs-3 tabBar-home">
+			<div class="pic-div"><img src="../images/home.gif" /></div>
+			<p>首页</p>
+		</div>
+		<div class="mui-col-xs-3 tabBar-bill">
+			<div class="pic-div"><img src="../images/bill.gif" /></div>
+			<p>账单</p>
+		</div>
+		<div class="mui-col-xs-3 tabBar-share">
+			<div class="pic-div"><img src="../images/share.gif" /></div>
+			<p>分享</p>
+		</div>
+		<div class="mui-col-xs-3 tabBar-my">
+			<div class="pic-div"><img src="../images/my-b.gif" /></div>
+			<p class="tabBar-active">我的</p>
+		</div>
+	</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.12.4.js" ></script>
+<script type="text/javascript" src="../js/public.js" ></script>
+<script type="text/javascript" charset="utf-8">
+    mui.init();
+    $(function(){
+    	//点击底部导航栏跳转页面
+    	$(".tabBar-home").click(function(){
+    		window.location.href="index.html"
+    	})
+    	$(".tabBar-bill").click(function(){
+    		window.location.href="bill.html"
+    	})
+    	$(".tabBar-share").click(function(){
+    		window.location.href="share.html"
+    	})
+    	$(".tabBar-my").click(function(){
+    		window.location.href="my.html"
+    	})
+    	
+    	//点击关于我们
+    	$(".about-us").click(function(){
+    		mui('.popover-about-us').popover("show")
+    	})
+    	
+    	//点击我的建议
+    	$(".my-suggest").click(function(){
+    		mui('.popover-my-suggest').popover("show")
+    	})
+    	$(".no").click(function(){
+    		mui('.popover-my-suggest').popover("hide")
+    	})
+    	$(".sure").click(function(){
+    		//点击确认获取建议
+    		var data={
+    			suggest:$(".popover-my-suggest textarea").val()
+    		}
+    		
+//  		$.ajax({
+//  			type:"post",
+//  			url:"",
+//  			data:data,
+//  			success:function(){
+					//清空内容
+//  				$(".popover-my-suggest textarea").val("");
+					//重置字数限制
+//					var num=$(".popover-my-suggest textarea").val().length;
+//  				$(".popover-my-suggest span").text(200-num)
+//  			}
+//  		});
+    		mui('.popover-my-suggest').popover("hide")
+    	})
+    	
+    	//我的建议-限制字数
+    	$(".popover-my-suggest textarea").keyup(function(){
+    		var num=$(this).val().length;
+    		$(".popover-my-suggest span").text(200-num)
+    	})
+    	
+    	//弹出框居中
+    	
+    	//获取body宽度
+    	var pWidth=$("body").width()
+    	//初始化弹出框宽度
+    	var tWidth=pWidth*0.9;
+    	$(".popover").css("width",tWidth+"px");
+    	//初始化设置账单栏的居中
+    	$(".popover").css("margin-left",-tWidth/2+"px");
+    	
+    	$(window).resize(function(){
+	    	//弹出框居中
+	    	var pWidth=$("body").width()
+	    	var tWidth=pWidth*0.9;
+	    	$(".popover").css("width",tWidth+"px");
+	    	$(".popover").css("margin-left",-tWidth/2+"px")
+    	})
+    })
+</script>
+</html>

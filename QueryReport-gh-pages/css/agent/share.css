@@ -1,0 +1,46 @@
+body{
+	overflow: hidden;
+}
+.all-div{
+	height: 100%;
+	background: url(../../images/share-bg.gif) no-repeat;
+	background-size: 100% 100%;
+}
+.big-div{
+	width: 62%;
+	margin: 0 auto;
+}
+.share-title-English{
+	padding-top: 15%;
+	margin-bottom: 15%;
+}
+.share-title-English p{
+	color: #1fa8f6;
+	font-size: 1.31rem;
+	font-weight: 600;
+}
+.share-title-Chinese{
+	margin-bottom: 15%;
+}
+.share-title-Chinese img{
+	float: right;
+	margin-right: 2%;
+}
+.share-title-Chinese p{
+	color: white;
+	font-size: 1.5rem;
+}
+.two-dimension-code{
+	border-radius:10px ;
+	background-color:rgba(9,189,232,0.4);
+	text-align: center;
+	padding:10%;
+}
+.two-dimension-code p{
+	margin-top: 10%;
+	margin-bottom: 0;
+	color: #ecf4fd;
+}
+.two-dimension-code-img img{
+	width: 100%;
+}

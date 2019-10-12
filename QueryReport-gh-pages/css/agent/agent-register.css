@@ -1,0 +1,106 @@
+.all-div{
+	height: 100%;
+	background: url(../../images/agent-register.gif) no-repeat;
+	background-size: 100% 100%;
+	overflow-y: scroll;
+}
+form{
+	padding-top:40%;
+}
+input{
+	width: 80% !important;
+	margin-left: 10%;
+	padding: 22px 50px !important;
+	border-radius:30px !important;
+	margin-bottom: 20px !important;
+}
+#name{
+	background: white url(../../images/agent-register_03.gif) no-repeat;
+	background-position:18px 14px;
+}
+#identity{
+	background: white url(../../images/agent-register_07.gif) no-repeat;
+	background-position:18px 15px;
+}
+#phone{
+	background: white url(../../images/agent-register_10.gif) no-repeat;
+	background-position:18px 12px;
+}
+#verification{
+	background: white url(../../images/agent-register_13.gif) no-repeat;
+	background-position:18px 12px;
+}
+#referral{
+	background: white url(../../images/agent-register_16.gif) no-repeat;
+	background-position:18px 12px;
+}
+input::-webkit-input-placeholder{
+    font-size:0.8rem ;
+    color: #cdcdcd;
+    letter-spacing: 1px;
+}
+input::-moz-placeholder{
+    font-size:0.8rem ;
+    color: #cdcdcd;
+    letter-spacing: 1px;
+}
+input::-ms-input-placeholder{
+    font-size:0.8rem ;
+    color: #cdcdcd;
+    letter-spacing: 1px;
+}
+.verification-div{
+	position: relative;
+}
+.verification-span{
+	position: absolute;
+	background-color: #006cff;
+	color: #ffffff;
+	font-size: 0.8rem;
+	top:1px;
+	right:10%;
+	display: inline-block;
+	width:25%;
+	border-top-right-radius:30px ;
+	border-bottom-right-radius:30px ;
+	height: 44px;
+	text-align: center;
+	border-left:1px solid #cccccc;
+	cursor: pointer;
+}
+.register-btn{
+	border: none;
+	background-color: #006cff;
+	color: white;
+	width: 80%;
+	margin-left: 10%;
+	padding: 14px 50px;
+	border-radius:30px;
+	font-size: 0.95rem;
+	letter-spacing: 1px;
+	margin-top: 8%;
+}
+.error-border{
+	border: 1px solid red !important;
+}
+p{
+	font-size: 0.7rem;
+	color: white;
+	margin-top:5%;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 10%;
+}
+p a{
+	color: #01cdf9;
+}
+p span{
+	margin-left: 27%;
+}
+input[type="checkbox"]{
+	padding: 0 !important;
+	width:5% !important;
+	position: absolute;
+	top:18%;
+	left:10%;
+}

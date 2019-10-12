@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>白果数聚</title>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/user-public.css" />
+    <link rel="stylesheet" href="../css/user/user-my.css" />
+</head>
+<body>
+	<div class="big-div">
+		<!--头部-->
+		<div class="my-msg-div">
+			<div class="user-pic">
+				<img src="../images/about-us.gif" />
+			</div>
+			<p class="user-name">用户XXXXXX</p>
+		</div>
+		<!--内容-->
+		<div class="my-centent">
+			<ul class="mui-table-view">
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right" href="query-history.html">查询历史</a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right">消费记录</a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right">关于我们</a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right">问题反馈</a>
+			    </li>
+			</ul>
+		</div>
+	</div>
+	<!--底部-->
+	<div class="tabBar mui-row">
+		<div class="tabBar-home tabBar-div mui-col-xs-4">
+			<div class="pic-div"><img src="../images/home.gif" /></div>
+			<p>首页</p>
+		</div>
+		<!--<div class="tabBar-report tabBar-div">
+			<div class="pic-div"><img src="../images/u-tabbar-report.gif" /></div>
+			<p>报告</p>
+		</div>-->
+		<div class="mui-col-xs-4 tabBar-div"></div>
+		<!--<div class="tabBar-share tabBar-div">
+			<div class="pic-div"><img src="../images/share.gif" /></div>
+			<p>分享</p>
+		</div>-->
+		<div class="tabBar-my tabBar-div mui-col-xs-4">
+			<div class="pic-div"><img src="../images/my-b.gif" /></div>
+			<p class="tabBar-active">我的</p>
+		</div>
+	</div>
+	<div class="tabBar-report-btn">
+		查询报告
+	</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.12.4.js" ></script>
+<script type="text/javascript" src="../js/public.js" ></script>
+<script type="text/javascript" charset="utf-8">
+    mui.init();
+    $(function(){
+    	//点击底部导航栏跳转页面
+    	$(".tabBar-report-btn").click(function(){
+    		window.location.href="user-report-xb.html"
+    	})
+//  	$(".tabBar-share").click(function(){
+//  		window.location.href="user-share.html"
+//  	})
+    	$(".tabBar-home").click(function(){
+    		window.location.href="index.html"
+    	})
+    	
+    	//设置整个页面大小
+    	var htmlHeight=$(window).height();
+    	$(".big-div").height(htmlHeight-100)
+    	$(window).resize(function(){
+    		//设置按钮贴底
+	    	var divHeight=$(".msg-div").height();
+	    	$(".btn-div").height(divHeight)
+	    	//设置整个页面大小
+	    	var htmlHeight=$(window).height();
+	    	$(".big-div").height(htmlHeight-100)
+    	})
+    })
+</script>
+</html>

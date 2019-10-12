@@ -1,0 +1,22 @@
+body{
+	max-width: 430px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.tabBar{
+	position: fixed;
+	bottom: 0;
+	overflow: hidden;
+	background-color: white;
+	text-align: center;
+}
+.tabBar p{
+	font-size: 0.7rem;
+	color: #656565;
+}
+.pic-div{
+	padding-top: 10px;
+}
+.tabBar-active{
+	color: #59bff8 !important;
+}

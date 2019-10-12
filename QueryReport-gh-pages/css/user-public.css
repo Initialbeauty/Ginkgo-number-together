@@ -1,0 +1,43 @@
+body{
+	max-width: 430px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.big-div{
+	overflow-x: auto;
+}
+.tabBar{
+	background:url(../images/u-tabbar.png);
+	background-size: 100% 100%;
+	position: fixed;
+	bottom: 0;
+	overflow: hidden;
+	text-align: center;
+}
+/*.tabBar-div{
+	float: left;
+	width: 20%;
+}*/
+.tabBar p{
+	font-size: 0.7rem;
+	color: #656565;
+}
+.pic-div{
+	padding-top:20px;
+}
+.tabBar-active{
+	color: #59bff8 !important;
+}
+.tabBar-report-btn{
+	width: 75px;
+	height: 80px;
+	position: fixed;
+	bottom:1rem;
+	left: calc( 50% - 36px);
+	background: url(../images/u-home-button.gif) no-repeat;
+	background-size: 100% 100%;
+	font-size: 0.7rem;
+	color: white;
+	text-align: center;
+	line-height:75px;
+}

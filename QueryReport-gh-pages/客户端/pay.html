@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>白果数聚</title>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/user-public.css" />
+    <style>
+    	.payer{
+    		text-align: center;
+    		margin-top: 5%;
+    		color: black;
+    		font-size: 1rem;
+    	}
+    	.pay-money{
+    		text-align: center;
+    		font-size:3rem;
+    		color: black;
+    		margin-top: 5%;
+    	}
+    	.payee{
+    		background-color: white;
+    		overflow: hidden;
+    		padding:5%;
+    		margin-top:8%;
+    		font-size: 1rem;
+    	}
+    	.payee span{
+    		float: right;
+    		color: black;
+    	}
+    	button{
+    		width: 90%;
+    		margin-left: 5%;
+    		font-size: 1.1rem !important;
+    		padding: 3% 0 !important;
+    		margin-top: 3%;
+    	}
+    </style>
+</head>
+<body>
+	<p class="payer">郑先生</p>
+	<p class="pay-money">￥<span>29.80</span></p>
+	<p class="payee">收款方<span>来查贝</span></p>
+	<button type="button" class="mui-btn mui-btn-success">立即支付</button>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.12.4.js" ></script>
+<script type="text/javascript" src="../js/public.js" ></script>
+<script type="text/javascript" charset="utf-8">
+    mui.init();
+</script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>融数聚信</title>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/user-public.css" />
+</head>
+<body>
+	<!--底部-->
+	<div class="tabBar mui-row">
+		<div class="tabBar-home tabBar-div">
+			<div class="pic-div"><img src="../images/home.gif" /></div>
+			<p>首页</p>
+		</div>
+		<div class="tabBar-report tabBar-div">
+			<div class="pic-div"><img src="../images/u-tabbar-report.gif" /></div>
+			<p>报告</p>
+		</div>
+		<div class="mui-col-xs-4 tabBar-div">
+		</div>
+		<div class="tabBar-share tabBar-div">
+			<div class="pic-div"><img src="../images/share-b.gif" /></div>
+			<p class="tabBar-active">分享</p>
+		</div>
+		<div class="tabBar-my tabBar-div">
+			<div class="pic-div"><img src="../images/my.gif" /></div>
+			<p>我的</p>
+		</div>
+	</div>
+	<div class="tabBar-report-btn">
+		查询报告
+	</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.12.4.js" ></script>
+<script type="text/javascript" src="../js/public.js" ></script>
+<script type="text/javascript" charset="utf-8">
+    mui.init();
+    $(function(){
+    	//点击底部导航栏跳转页面
+    	$(".tabBar-report").click(function(){
+    		window.location.href="user-report-xb.html"
+    	})
+    	$(".tabBar-home").click(function(){
+    		window.location.href="user-home.html"
+    	})
+    	$(".tabBar-my").click(function(){
+    		window.location.href="user-my.html"
+    	})
+    })
+</script>
+</html>

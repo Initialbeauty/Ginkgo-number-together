@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/pubic.css" />
+    <link rel="stylesheet" href="../css/agent/agent-register.css" />
+</head>
+<body>
+	<div class="all-div">
+		<form>
+			<div>
+				<input type="text" placeholder="请输入姓名" id="name"/>
+			</div>
+			<div>
+				<input type="text" placeholder="请输入身份证" id="identity"/>
+			</div>
+			<div>
+				<input type="text" placeholder="请输入手机号码" id="phone"/>
+			</div>
+			<div class="verification-div">
+				<input type="text" placeholder="请输入短信验证码" id="verification"/>
+				<button class="verification-span">发送验证码</button>
+			</div>
+			<div>
+				<input type="text" placeholder="请输入推荐码" id="referral"/>
+			</div>
+		</form>
+		<button class="register-btn">注册</button>
+		<p>
+			<input name="checkbox" value="agree" type="checkbox" >
+			<span>注册后表示你同意企业的<a>《使用协议》</a></span>
+		</p>
+	</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.12.4.js" ></script>
+<script src="../js/public.js"></script>
+<script type="text/javascript" charset="utf-8">
+    mui.init();
+    $(function(){
+    	
+    	//获取屏幕高度
+    	var pHeight=$(window).height()
+    	//设置body高度
+    	$("body").css("height",pHeight+"px")
+    	$(window).resize(function(){
+    		var pHeight=$(window).height();
+    		$("body").css("height",pHeight+"px")
+    	})
+    	
+    	//点击发送验证码
+    	$(".verification-span").click(function(){
+			//判断是否输入金额
+			var phone=$("#phone").val();
+			if(phone.length==0){
+				mui.alert("请输入手机号");
+				return;
+			}
+			//提示验证码已发送
+//			$.ajax({
+//				type:"get",
+//				url:"",
+//				async:true,
+//				success:function(){
+//					mui.alert("已发送");
+//				}
+//			});
+				
+			//此时不可再点击发送验证码
+			$(".verification-span").attr("disabled","disabled");
+			//设置1分钟定时器，1分钟后关闭定时器，按钮可点击
+			var num=59;
+			$(".verification-span").text('（'+num+')s')
+			timer=setInterval(function(){
+				num--;
+				$(".verification-span").text('（'+num+')s');
+				if(num<1){
+					clearInterval(timer);
+					$(".verification-span").text('发送验证码');
+					$(".verification-span").removeAttr("disabled")
+				}
+			},1000)
+		})
+    	
+    	//表单验证
+    	$("input").blur(function(){
+    		if($(this).attr("id")=="referral"){
+    			return false;
+    		}
+    		if(!this.value || this.value.trim() == "") {
+			    var label = this.placeholder;
+			    var num=label.indexOf("入");
+			    var hint=label.substring(num+1)
+			    mui.alert(hint + "不允许为空");
+			    $(this).addClass("error-border")
+			    check = false;
+			}
+			else{
+				$(this).removeClass("error-border")
+			}
+    	})
+    	
+    	$(".register-btn").click(function(){
+    		var check=true;
+    		mui("input").each(function() {
+    			if($(this).attr("id")=="referral"){
+	    			return false;
+	    		}
+			//若当前input为空，则alert提醒 
+				if(!this.value || this.value.trim() == "") {
+				    var label = this.placeholder;
+				    var num=label.indexOf("入");
+				    var hint=label.substring(num+1)
+				    mui.alert(hint + "不允许为空");
+				    $(this).addClass("error-border")
+				    check = false;
+				}
+				else{
+					$(this).removeClass("error-border")
+				}
+			}); 
+			if(!$("p input").is(":checked")){
+				$("p").addClass("error-border");
+				mui.alert("请阅读并同意协议");
+				check = false;
+			}
+			else{
+				$(".checkbox-div").removeClass("error-border");
+			}
+			
+			//校验通过，继续执行业务逻辑
+			if(check){
+			    mui.alert('验证通过!');
+			    setTimeout(function(){
+			    	window.location.href="index.html"
+			    },1000)
+			}
+    	})
+    })
+</script>
+</html>

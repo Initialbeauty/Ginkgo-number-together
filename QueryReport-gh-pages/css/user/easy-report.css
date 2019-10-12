@@ -1,0 +1,16 @@
+.detail-report-title{
+	background: url(../../images/u-report-bg_jb.gif) no-repeat;
+	background-size: 100%;
+}
+.detail-content>p>a{
+	color: #eb6b1b;
+}
+.btn-div button{
+	background:url(../../images/u-report-jbsbtn.png);
+}
+.begin-analyze-btn{
+	background: url(../../images/u-report-jblbtn.png) no-repeat;
+}
+.verification-span{
+	background-color: #13bef2;
+}
